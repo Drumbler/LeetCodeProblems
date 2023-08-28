@@ -1,14 +1,21 @@
 class duplicate(object):
     def containsDuplicate(self, nums):
-        #перерешать
-        s = set()
-        for v in nums:
-            nums_dict[v] += 1
-            if nums_dict[v] > 1:
-                return True
-        return False
-
+        # nums_dict = set()
+        # for i in range(0, len(nums)):
+        #     if nums[i] in nums_dict:
+        #         return True
+        #     else:
+        #         nums_dict.add(nums[i])
+        # return False
+        ################################################
+        # for i in range(len(nums)):
+        #     for j in range(i+1, len(nums)):
+        #         if nums[j] == nums[i]:
+        #             return True
+        # return False
+        ##########################
+        return len(set(nums)) < len(nums)
 
 
 s = duplicate()
-print(s.containsDuplicate([2, 14, 18, 22, 22]))
+print(s.containsDuplicate([2,14,18,22,22]))
