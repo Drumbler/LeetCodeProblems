@@ -4,13 +4,13 @@ class repeatedPattern(object):
             if len(s) % l != 0:
                 continue
             sub = s[0:l]
-            print(sub)
+
+            ok = True
             for j in range(l, len(s), l):
-                c = 0
                 if sub != s[j:j + l]:
-                    c += 1
+                    ok = False
                     break
-            if c == 0:
+            if ok:
                 return True
         return False
 
