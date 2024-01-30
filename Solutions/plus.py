@@ -1,17 +1,16 @@
 class plus(object):
     def plusOne(self, digits):
-        dig = len(digits) - 1
-        if digits[dig] + 1 >= 10:
-            digits[dig - 1] += 1
-            digits[dig] = 0
-            for i in range(dig, -1, -1):
-                if digits[i] >= 10:
-                    digits[i - 1] += 1
-                    digits[i] = 0
-        else:
-            digits[len(digits) - 1] += 1
+        digits[-1] += 1
+        for i in range(len(digits) - 1, -1, -1):
+            if digits[i] >= 10:
+                if not i:
+                    return [1] + [0] * len(digits)
+                digits[i - 1] += 1
+                digits[i] = 0
+            else:
+                break
         return digits
 
 
 s = plus()
-print(s.plusOne([9, 9, 9, 9, 9, 9]))
+print(s.plusOne([9, 9, 9, 9]))
