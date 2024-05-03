@@ -4,6 +4,7 @@ def fibonacci(n):
     return fibonacci(n - 1) + fibonacci(n - 2)
 
 
-n = 10
-for i in range(n):
-    print(fibonacci(i))
+print(fibonacci(37))
+# n = 10
+# for i in range(n):
+#     print(fibonacci(i))

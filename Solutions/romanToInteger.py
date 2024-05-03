@@ -10,15 +10,14 @@ class romanToInteger(object):
         return res
 
 
-# s = romanToInteger()
-# print(s.romanToInt('IL'))
+s = romanToInteger()
+print(s.romanToInt('VIII'))
 
-import itertools
+# import itertools
 
-a = (i for i in range(5))
-x, y = itertools.tee(a, 2)
-next(y)
+# a = (i for i in range(5))
+# x, y = itertools.tee(a, 2)
+# next(y)
 
-for c, n in itertools.zip_longest(x, y, fillvalue=''):
-    print(c, n)
-
+# for c, n in itertools.zip_longest(x, y, fillvalue=''):
+#     print(c, n)

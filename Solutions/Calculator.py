@@ -15,13 +15,24 @@ class Calculator:
 
     def to_postfix(self, dict_expr):
         stack = []
-        postfix_expr: str
+        postfix_expr = ""
         for i, c in enumerate(dict_expr):
             print(c, i)
-            if i == 0:
-                postfix_expr = c + " "
             if c.isnumeric():
-                postfix_expr += dict_expr + " "
+                postfix_expr += c + " "
+            elif (c == '('):
+                stack.append(c)
+            elif (c == ')'):
+                while len(stack) > 0 & stack[0] != '(':
+                    postfix_expr += stack.pop(0)
+                    print(len(stack))
+            elif c in s.operationPriority:
+                
+                
+
+                
+
+        print(postfix_expr)
 
                 
 
@@ -29,4 +40,5 @@ class Calculator:
 
 
 s = Calculator()
+
 print(s.to_postfix("1 + 2 + 3"))
