@@ -16,8 +16,8 @@ class pascalsTriangle(object):
 
             triangle.append(curr)
             prev = curr
-        return triangle
+        return triangle[numRows-1]
 
 
 s = pascalsTriangle()
-print(s.generate(20))
+print(s.generate(4))
